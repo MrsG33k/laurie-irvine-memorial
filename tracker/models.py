@@ -13,6 +13,7 @@ class MemorialPost(models.Model):
         ('railway', 'Railway'),
         ('football', 'Football'),
         ('community', 'Community'),
+        ('other', 'Other')
     ]
 
     # Form fields that visitors will complete
