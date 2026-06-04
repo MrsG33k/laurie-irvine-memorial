@@ -122,3 +122,13 @@ h1, h2, h3, h4, h5, h6, .display-4 {
 .section-heading {
     color: var(--cfc-stadium-blue);
 }
+
+/* Small Text Styling */
+.small-text {
+    font-size: 0.8rem
+}
+
+/* White Space Styling */
+.white-space {
+    white-space: pre-wrap;
+}
