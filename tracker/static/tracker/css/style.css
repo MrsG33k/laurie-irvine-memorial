@@ -153,8 +153,18 @@ h1, h2, h3, h4, h5, h6, .display-4 {
 
 /* Memorial Picture */
 .memorial-picture {
-    max-height: 350px;
+    max-height: 280px;
     filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+}
+
+/* Subtle white stadium-light halo glow for Dad's portrait */
+.memorial-picture-glow {
+    max-height: 280px;
+    /* Creates a soft, multi-layered white glow that makes the cutout pop against the dark blue grid */
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6)) 
+            drop-shadow(0 0 6px rgba(255, 255, 255, 0.2));
+    /* Adds a micro-interaction lift if hovered over */
+    transition: filter 0.3s ease;
 }
 
 /*Footer Styling */
