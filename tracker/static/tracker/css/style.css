@@ -141,6 +141,6 @@ h1, h2, h3, h4, h5, h6, .display-4 {
 
 /* Memorial Picture */
 .memorial-picture {
-    max-height: 200px;
+    max-height: 280px;
     filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
 }
