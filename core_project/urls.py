@@ -15,8 +15,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # Secure backend admin panel route
+    path('admin/', admin.site.allowed_urls if hasattr(admin, 'allowed_urls')
+         else admin.site.urls),
+    # Connects the root address of this site to the memorial app routes
+    path('', include('tracker.urls')),
 ]
