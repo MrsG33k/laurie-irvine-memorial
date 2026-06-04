@@ -147,6 +147,8 @@ h1, h2, h3, h4, h5, h6, .display-4 {
 
 /*Footer Styling */
 .footer {
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 0.5px;
+    font-family: 'Alex Brush', cursive;
+    letter-spacing: 1px;
+    font-size: 1.8rem;
+    color: var(--cfc-accent-gold);
 }
