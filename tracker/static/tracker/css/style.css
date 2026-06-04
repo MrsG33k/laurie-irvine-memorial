@@ -72,12 +72,24 @@ h1, h2, h3, h4, h5, h6, .display-4 {
     letter-spacing: 0.5px;
 }
 
-/* Heading resembling a Stadium Canopy */
+/* Heading Canopy Background*/
 .stadium-header {
-    background: linear-gradient(135deg, var(--cfc-stadium-blue)0%, var(--cfc-royal-blue));
-    color: var(var(--cfc-clean-white));
-    border-bottom: 5px solid var(var(--cfc-accent-gold));
-    box-shadow: 0 4px 15px rgba(0,0,0,0,0.15);
+    background: 
+        /* Layer 1: A deep, smooth master gradient that eases back the harshness */
+        linear-gradient(135deg, rgba(0, 20, 40, 0.95) 0%, rgba(3, 40, 90, 0.95) 100%),
+        /* Layer 2: The carbon pattern, but with drastically reduced opacity (0.04 instead of 0.6) */
+        linear-gradient(27deg, rgba(0,0,0,0.2) 5px, transparent 5px) 0 5px,
+        linear-gradient(207deg, rgba(0,0,0,0.2) 5px, transparent 5px) 10px 0px,
+        linear-gradient(27deg, rgba(255,255,255,0.04) 5px, transparent 5px) 0px 10px,
+        linear-gradient(207deg, rgba(255,255,255,0.04) 5px, transparent 5px) 10px 5px,
+        linear-gradient(90deg, rgba(0,0,0,0.1) 10px, transparent 10px),
+        linear-gradient(45deg, rgba(255,255,255,0.04) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.04) 75%, rgba(255,255,255,0.04)),
+        linear-gradient(45deg, rgba(255,255,255,0.04) 25%, rgba(0,0,0,0.3) 25%, rgba(0,0,0,0.3) 75%, rgba(255,255,255,0.04) 75%, rgba(255,255,255,0.04)) 5px 5px;
+    background-size: 20px 20px;
+
+    color: var(--cfc-clean-white);
+    border-bottom: 5px solid var(--cfc-accent-gold);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
 /* Cards to represent each individual tribute */
@@ -141,7 +153,7 @@ h1, h2, h3, h4, h5, h6, .display-4 {
 
 /* Memorial Picture */
 .memorial-picture {
-    max-height: 280px;
+    max-height: 350px;
     filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
 }
 
@@ -151,4 +163,11 @@ h1, h2, h3, h4, h5, h6, .display-4 {
     letter-spacing: 1px;
     font-size: 1.8rem;
     color: var(--cfc-accent-gold);
+}
+
+.footer-background {
+    background: linear-gradient(135deg, var(--cfc-stadium-blue)0%, var(--cfc-royal-blue));
+    color: var(var(--cfc-clean-white));
+    border-bottom: 5px solid var(var(--cfc-accent-gold));
+    box-shadow: 0 4px 15px rgba(0,0,0,0,0.15);
 }
