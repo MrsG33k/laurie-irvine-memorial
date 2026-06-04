@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remembering Laurie Irvine</title>
+</head>
+<body>
+    <header>
+        <h1>In Loving Memory of Laurie Irvine</h1>
+        <p>Active Vitual Candles: <strong>{{ candle_count }}</strong></p>
+    </header>
+    <main>
+        <section>
+            <h2>Leave a Tribute and Light a Candle</h2>
+            <form method ="POST">
+                {% csrf_token %}
+
+                <p>
+                    <label for="author_name">Your name:</label><br>
+                    <input type="text" id="author_name" name="author_name" required>
+                </p>
+                <p>
+                    <label for="relationship">Relationship:</label><br>
+                    <select name="relationship" id="relationship">
+                        <option value="family">Family</option>
+                        <option value="friend">Friend</option>
+                        <option value="railway">Railway</option>
+                        <option value="football">Football</option>
+                        <option value="community">Community</option>
+                        <option value="other">Other</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="tribute_text">Your Memory or Message:</label></br>
+                    <textarea name="tribute_text" id="tribute_text" rows="5" required></textarea>
+                </p>
+                <p>
+                    <input type="text" id="light_candle" name = "light_candle">
+                    <label for="light_candle">Light a virtual candle for Laurie Irvine</label>
+                </p>
+
+                <button type="submit">Share Memory</button>
+            </form>
+        </section>
+        <hr>
+        <section>
+            <h2>Tribute Timeline</h2>
+            {% if tributes %}
+                {% for tribute in tributes %}
+                    <div style="border: 1px solid #ccc; padding: 15px; margin-bottom: 15px;">
+                        <h3>{{tribute.author_name}} <small>{{tribute.get_relationship_display}}</small></h3>
+                        <p>{{tribute.tribute_text}}</p>
+                        {% if tribute.light_candle %}
+                            <p>🕯️ <em>A candle was lit alongside this tribute</em></p>
+                        {% endif %}
+                        <small>Shared on: {{ tribute.date_created|date:"F d, Y P" }}</small>
+                    </div>
+                {% endfor %}
+            {% else %}
+                    <p>No tributes have been shared yet. Be the first to leave a memory.</p>
+            {% endif %}
+        </section>
+
+    </main> 
+</body>
+</html>
