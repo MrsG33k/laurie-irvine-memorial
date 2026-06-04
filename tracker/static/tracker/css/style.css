@@ -1,0 +1,124 @@
+/* Reset CSS by Josh W Comeau */
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+/* Custom CSS Styles by Jennie Whittaker */
+
+
+/* Custom Chelsea FC Inspired Colour palette */
+:root {
+    --cfc-royal-blue: #034694;    /* The iconic Chelsea Royal Blue */
+    --cfc-stadium-blue: #002244;  /* Navy for backgrounds and headers */
+    --cfc-accent-gold: #EEA925;   /* Gold for accents*/
+    --cfc-clean-white: #FFFFFF;   /* white for contrast */
+}
+
+body {
+    background-color: #f4f6f9;
+    font-family: 'Inter', sans-serif; /* Uses Inter, Google font */
+    color: var(--cfc-stadium-blue);
+}
+
+/* Header styles using Oswald Google fonts */
+h1, h2, h3, h4, h5, h6, .display-4 {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* Heading resembling a Stadium Canopy */
+.stadium-header {
+    background: linear-gradient(135deg, var(--cfc-stadium-blue)0%, var(--cfc-royal-blue));
+    color: var(var(--cfc-clean-white));
+    border-bottom: 5px solid var(var(--cfc-accent-gold));
+    box-shadow: 0 4px 15px rgba(0,0,0,0,0.15);
+}
+
+/* Cards to represent each individual tribute */
+.tribute-card {
+    border-left: 5px solid var(--cfc-royal-blue) !important;
+    background-color: var(--cfc-clean-white);
+    transition: transform 0.2s ease;
+}
+
+.tribute-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(3,70,148,0.1) !important;
+}
+
+/* Submission card styling */
+.form-card {
+    border:none;
+    border-top: 4px solid var(--cfc-accent-gold);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Chelsea Custom Buttons */
+.btn-cfc-blue {
+    background-color: var(--cfc-royal-blue);
+    color: var(--cfc-clean-white);
+    font-weight: 600;
+    border: none;
+}
+
+.btn-cfc-blue:hover {
+    background-color: var(--cfc-stadium-blue);
+    color: var(--cfc-clean-white);
+}
+
+/* Glowing Candle Effect */
+.glowing-candle {
+    text-shadow: 0 0 8px rgba(238,169,37,0.6);
+    font-size: 1.25rem;
+}
+
+/* Section Headings */
+.section-heading {
+    color: var(--cfc-stadium-blue);
+}
