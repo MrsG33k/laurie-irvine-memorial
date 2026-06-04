@@ -390,7 +390,7 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 
 | No | Feature | Issue | Fix |
 | :--- | :--- | :--- | :--- |
-| 1 | Landing page | The buttons on the landing page had the same BG and text colour rendering the button text unviewable in its current state. <img src="assets/images/bug1colourcontrastbuttons.webp" align="left" alt="Screenshot of blue buttons with text same colour" width="200"> | Updated root values in CSS style to add a button text color of white to contrast the Tardis blue. |
+| 1 | Tribute Wall | When adding a tribute, the entries nest rather than showing as indivdual entries. <img src="assets/bug1nesting.webp" align="left" alt="Screenshot of nesting tributes" width="200"> | The for loop to display the entries was missing a closing div tag, which was causing the loop to not work correctly |
 
 
 
