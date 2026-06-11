@@ -1,0 +1,14 @@
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Django localdatabase
+db.sqlite3
+
+# Location environment variables
+.env
+v envy/
+venv/
+ENV/
