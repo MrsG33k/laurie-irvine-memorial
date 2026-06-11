@@ -333,11 +333,11 @@ I have used semantic HTML and ARIA labels throughout to support those using assi
 ## Technologies Used
 
 * **Languages:** HTML5, CSS3, Python
-* **Framework:** Django
+* **Frameworks:** Django, Bootstrap 5
 * **Database:** PostgreSQL
 * **Hosting:** Heroku
 
-### Frameworks, Libraries & Programs Used
+### Libraries & Programs Used
 
 
 * [Canva](https://www.canva.com/online-whiteboard/wireframes/) - Used to create wireframes.
@@ -399,7 +399,7 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 
 
 ### Code Used
-
+- [CSS3 Patterns Gallery](https://projects.verou.me/css3patterns/#carbon): Design by Atle Mo and code by Sebastien Grosjean. Modified for the blue header.
 
 
 ### Content
@@ -410,6 +410,7 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 
 
 - [https://shields.io/](https://shields.io/) - To create the badges on the README introduction
+- [https://www.flaticon.com/free-icon/candle_2146319?term=candle&page=1&position=12&origin=search&related_id=2146319](https://flaticon.com) - Image of a candle used for the Favicon by JustIcon
 
   
 ###  Acknowledgments
