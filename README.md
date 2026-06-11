@@ -392,7 +392,7 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 | :--- | :--- | :--- | :--- |
 | 1 | Tribute Wall | When adding a tribute, the entries nest rather than showing as indivdual entries. <img src="assets/bug1nesting.webp" align="left" alt="Screenshot of nesting tributes" width="200"> | The for loop to display the entries was missing a closing div tag, which was causing the loop to not work correctly |
 | 2| Header Section| After changing the initial header image, the image appeared to be floating, rather than lying flush against the gold border. <img src="assets/bug2floating.webp" align="left" alt="Screenshot of image of floating header" width="200"> | I changed the flexbox grid ratio slightly to give the image more space and forced a zero margin / padding at the bottom of the image <img src="assets/bug2fix.webp" align="left" alt="Screenshot of the fixed image placement" width="200"> |
-
+| 2| Header Section| After making the changes for Bug 2, on inspection it appeared that the new grid spacing, made the image shrink significantly on tablet modes. Making the text larger, and the image insignificant.  <img src="assets/bug3shrink.webp" align="left" alt="Screenshot of image of floating header" width="200"> | I decided to make use of Bootstraps responsive layout (col-md-6 , col-lg-5) to ensure the memorial image scales fluidly and sits flush against the gold border across all device viewports.  <img src="assets/bug3fix.webp" align="left" alt="Screenshot of the fixed image placement" width="200"> |
 
 
 ## Credits

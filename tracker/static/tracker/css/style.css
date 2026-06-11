@@ -158,14 +158,6 @@ h1, h2, h3, h4, h5, h6, .display-4 {
     border-top: 5px solid var(--cfc-accent-gold) !important;
 }
 
-/* Memorial Picture */
-.memorial-picture {
-    height: auto;
-    width: 100%;
-    max-height: 38vh;
-    object-fit: contain;
-    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
-}
 
 /* Subtle white halo glow for Dad's portrait */
 .memorial-picture-glow {
@@ -182,10 +174,17 @@ h1, h2, h3, h4, h5, h6, .display-4 {
 
     
     /* Creates a silhouette around the header image */
-    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.95)) 
-            drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.95)) 
+            drop-shadow(0 3px 9px rgba(0, 0, 0, 0.5));
     /*Small transition on hover */
     transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.header-tribute-text {
+    font-size: 1.55rem !important;
+    line-height: 1.4;
+    font-weight: 300 !important;
+
 }
 
 /*Footer Styling */
@@ -201,4 +200,31 @@ h1, h2, h3, h4, h5, h6, .display-4 {
     color: var(var(--cfc-clean-white));
     border-bottom: 5px solid var(var(--cfc-accent-gold));
     box-shadow: 0 4px 15px rgba(0,0,0,0,0.15);
+}
+
+/*Media Queries */
+
+/* Make the memorial image smaller on mobile */
+@media (max-width: 767px) {
+    .memorial-picture-glow {
+        max-width: 220px !important;
+        margin: 1.5rem auto 0 auto !important;
+    }
+    
+}
+
+/* Spacing between text and image on mobile */
+@media (max-width: 767px) {
+    .stadium-header .col-12.order-1 {
+        margin-bottom: -3rem !important;
+    }
+
+    .stadium-header .col-12 {
+        padding-bottom: 0 !important;
+    }
+
+    .header-tribute-text {
+        font-size: 1rem !important;
+        line-height: 1.3;
+    }
 }
