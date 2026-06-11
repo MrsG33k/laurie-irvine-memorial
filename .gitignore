@@ -4,11 +4,15 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Django localdatabase
+# Python Virtual Environments
+venv/
+ENV/
+env/
+
+# Django local database
 db.sqlite3
 
 # Location environment variables
 .env
-v envy/
-venv/
-ENV/
+.vscode/
+.DS_Store
