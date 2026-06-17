@@ -8,12 +8,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-fallback-development-key-never-use-in-production')
 
-DEBUG = 'runserver' in sys.argv or os.environ.get('DEBUG', 'False') == 'True'
+DEBUG = 'runserver' in sys.argv
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = [BASE_DIR / "tracker" / "static"]
+WHITENOISE_MANIFEST_STRICT = False
 
 DATABASES = {
     'default': {
