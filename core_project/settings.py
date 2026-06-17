@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# Set default values for the environment variables if they’re not already set
+# Set default values for the environment variables
 os.environ.setdefault("PGDATABASE", "memorial")
 os.environ.setdefault("PGUSER", "postgres")
 os.environ.setdefault("PGPASSWORD", "23Vad3r0r3029!")
@@ -29,6 +29,15 @@ DATABASES = {
         'PORT': os.environ["PGPORT"],
     }
 }
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles'
+]
 
 
 MIDDLEWARE = [
