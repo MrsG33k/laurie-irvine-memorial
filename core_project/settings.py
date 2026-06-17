@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles'
 ]
 
+ROOT_URLCONF = 'core_project.urls'
+WSGI_APPLICATION = 'core_project.wsgi.application'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
