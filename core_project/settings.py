@@ -11,11 +11,12 @@ SECRET_KEY = 'django-insecure-=5gz0-l78ql7-er!*d-%ogx=74=3nu&d9tnae+6a8rw$@dvobw
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 # Set default values for the environment variables
-os.environ.setdefault("PGDATABASE", "memorial")
+
+os.environ.setdefault("PGDATABASE", "railway")
 os.environ.setdefault("PGUSER", "postgres")
-os.environ.setdefault("PGPASSWORD", "23Vad3r0r3029!")
-os.environ.setdefault("PGHOST", "localhost")
-os.environ.setdefault("PGPORT", "5432")
+os.environ.setdefault("PGPASSWORD", "gMFSeJWiMemGKgDiGrPYPOVqiyieETMR")
+os.environ.setdefault("PGHOST", "thomas.proxy.rlwy.net")
+os.environ.setdefault("PGPORT", "41696")
 
 
 STATIC_URL = 'static/'
