@@ -8,7 +8,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-fallback-development-key-never-use-in-production')
 
-DEBUG = 'runserver' in sys.argv or os.environ.get('DEBUG', 'False') == 'True'
+# DEBUG = 'runserver' in sys.argv or os.environ.get('DEBUG', 'False') == 'True'
+DEBUG = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / "staticfiles"
