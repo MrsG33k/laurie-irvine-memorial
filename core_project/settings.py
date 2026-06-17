@@ -41,12 +41,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tracker'
+    'tracker',
 ]
 
 ROOT_URLCONF = 'core_project.urls'
 WSGI_APPLICATION = 'core_project.wsgi.application'
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-production-721e.up.railway.app/',
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
