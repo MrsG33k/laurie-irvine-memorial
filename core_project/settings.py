@@ -51,6 +51,8 @@ CSRF_TRUSTED_ORIGINS = [
     'https://web-production-721e.up.railway.app/',
 ]
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
