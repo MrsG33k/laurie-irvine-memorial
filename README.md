@@ -397,8 +397,8 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 
 ## Credits
 
-- [Deploying Django to Railway](https://www.youtube.com/watch?v=A4Pn2lEdoLQ&start=0): YouTube video by CodingEntrepreneurs to help with issues when deploying Django to Railway App.
-
+- [Deploying Django to Railway](https://www.youtube.com/watch?v=A4Pn2lEdoLQ&start=0): YouTube video by Coding Entrepreneurs to help with issues when deploying Django to Railway App.
+- [Railway User Guides](https://docs.railway.com/guides/django): Railway official guides to support deploying Django app to Railway.
 
 
 ### Code Used
