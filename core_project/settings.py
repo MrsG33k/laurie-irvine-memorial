@@ -1,6 +1,8 @@
-
 import os
 from pathlib import Path
+
+# Calculates the absolute filepath to project main folder
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
