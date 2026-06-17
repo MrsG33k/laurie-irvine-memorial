@@ -1,22 +1,26 @@
 import os
+import dj_database_url
 from pathlib import Path
 
 # Calculates the absolute filepath to project main folder
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-=5gz0-l78ql7-er!*d-%ogx=74=3nu&d9tnae+6a8rw$@dvobw'
+# SECRET_KEY = 'django-insecure-=5gz0-l78ql7-er!*d-%ogx=74=3nu&d9tnae+6a8rw$@dvobw'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-fallback-development-key-never-use-in-production')
+
+DEBUG = os.environ.get('DEVELOPMENT', 'False') == 'True'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 # Set default values for the environment variables
 
-os.environ.setdefault("PGDATABASE", "railway")
-os.environ.setdefault("PGUSER", "postgres")
-os.environ.setdefault("PGPASSWORD", "gMFSeJWiMemGKgDiGrPYPOVqiyieETMR")
-os.environ.setdefault("PGHOST", "thomas.proxy.rlwy.net")
-os.environ.setdefault("PGPORT", "41696")
+#os.environ.setdefault("PGDATABASE", "railway")
+#os.environ.setdefault("PGUSER", "postgres")
+#os.environ.setdefault("PGPASSWORD", "gMFSeJWiMemGKgDiGrPYPOVqiyieETMR")
+#os.environ.setdefault("PGHOST", "thomas.proxy.rlwy.net")
+#os.environ.setdefault("PGPORT", "41696")
 
 
 STATIC_URL = 'static/'
@@ -33,6 +37,12 @@ DATABASES = {
         'PORT': os.environ["PGPORT"],
     }
 }
+
+if os.environ.get('DATABASE_URL'):
+    DATABASES['default'] = dj_database_url.config(
+        conn_max_age=600,
+        ssl_require=True
+    )
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -80,7 +90,6 @@ TEMPLATES = [
     },
 ]
 
-DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
 # Password validation
