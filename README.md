@@ -1,8 +1,8 @@
 # Milestone 3: Virtual Memorial and Tribute Space
 
 <figure>
-    <img src="assets/images/amiresponsivegame.webp"
-         alt="Where in the whoniverse loading on a monitor, laptop, tablet and phone">
+    <img src="assets/amiresponsive.webp"
+         alt="Laurie Irvine Memorial loading on a monitor, laptop, tablet and phone">
 </figure>
 
 
@@ -15,15 +15,11 @@ This web application has been developed for Milestone 3 of the Code Institute Le
 I have created a private virtual memorial and tribute space dedicated to the memory of my late father. It provides an interface where family, friends and community can easily read a shared timeline of condolences, submit their own text-based tributes and light a virtual candle.
 
 
-You can view the deployed application here [Where in the Whoniverse?](https://....)
+You can view the deployed application here [Laurie Irvine Memorial](https://web-production-721e.up.railway.app/)
 
 
-![Github Last Commit](https://img.shields.io/github/last-commit/MrsG33k/CI-MS2-Whoniverse)
-![Github language count](https://img.shields.io/github/languages/count/MrsG33k/CI-MS2-Whoniverse)
-![HTML](https://img.shields.io/badge/language-HTML-red)
-![CSS](https://img.shields.io/badge/language-CSS-blue)
-![JS](https://img.shields.io/badge/language-Javascript-yellow)
-![W3C validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fmrsg33k.github.io%2FCI-MS2-Whoniverse%2Findex.html)
+![Github Last Commit](  /github/last-commit/MrsG33k/CI-MS3-Tribute)
+![Github language count](https://img.shields.io/github/languages/count/MrsG33k/CI-MS3-Tribute)
 
 ---
 
