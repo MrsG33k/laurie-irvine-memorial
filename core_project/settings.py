@@ -8,6 +8,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-fallback-development-
 
 DEBUG = os.environ.get('DEBUG_VALUE', 'True') == 'True'
 
+# Temporary fix for clickjacking issue, will be removed in the future when the issue is resolved
+X_FRAME_OPTIONS = 'ALLOWALL'
+
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
