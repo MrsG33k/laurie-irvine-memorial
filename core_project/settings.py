@@ -27,7 +27,7 @@ DATABASES = {
         'PORT': os.environ["PGPORT"],
     }
 }
-
+"""
 if os.environ.get('DATABASE_URL'):
     # Check if we are using Railway internal network address
     is_internal = "railway.internal" in os.environ.get('DATABASE_URL', '')
@@ -35,7 +35,7 @@ if os.environ.get('DATABASE_URL'):
         conn_max_age=600,
         #Disable SSL for internal Railway connections, enable for external connections
         ssl_require=not is_internal
-    )
+    ) """
 
 INSTALLED_APPS = [
     'django.contrib.admin',
