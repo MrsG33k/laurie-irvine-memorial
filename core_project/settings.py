@@ -10,9 +10,19 @@ DEBUG = os.environ.get('DEBUG_VALUE', 'True') == 'True'
 
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / "staticfiles"
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+# Tells Django where to collect static files for production
 STATICFILES_DIRS = [BASE_DIR / "tracker" / "static"]
+# Defines storage backends for static and media files
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
+# Prevents crashing if a file is missing
 WHITENOISE_MANIFEST_STRICT = False
 
 DATABASES = {
