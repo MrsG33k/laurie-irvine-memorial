@@ -29,9 +29,12 @@ DATABASES = {
 }
 
 if os.environ.get('DATABASE_URL'):
+    # Check if we are using Railway internal network address
+    is_internal = "railway.internal" in os.environ.get('DATABASE_URL', '')
     DATABASES['default'] = dj_database_url.config(
         conn_max_age=600,
-        ssl_require=True
+        #Disable SSL for internal Railway connections, enable for external connections
+        ssl_require=not is_internal
     )
 
 INSTALLED_APPS = [
