@@ -1,6 +1,4 @@
 import os
-import dj_database_url
-import sys
 from pathlib import Path
 
 # Calculates the absolute filepath to project main folder
@@ -8,8 +6,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-fallback-development-key-never-use-in-production')
 
-# DEBUG = 'runserver' in sys.argv
-DEBUG = True
+DEBUG = os.environ.get('DEBUG_VALUE', 'True') == 'True'
+
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / "staticfiles"
@@ -27,15 +25,6 @@ DATABASES = {
         'PORT': os.environ["PGPORT"],
     }
 }
-"""
-if os.environ.get('DATABASE_URL'):
-    # Check if we are using Railway internal network address
-    is_internal = "railway.internal" in os.environ.get('DATABASE_URL', '')
-    DATABASES['default'] = dj_database_url.config(
-        conn_max_age=600,
-        #Disable SSL for internal Railway connections, enable for external connections
-        ssl_require=not is_internal
-    ) """
 
 INSTALLED_APPS = [
     'django.contrib.admin',
